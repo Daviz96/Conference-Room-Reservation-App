@@ -15,6 +15,10 @@ class AddRoom(View):
 
     def post(self, request):
         # <other view logic>
+        roomName = request.POST.get("roomName")
+        capacity = request.POST.get("capacity")
+        projector = request.POST.get("projector")
+
         return HttpResponse('result')
 
 

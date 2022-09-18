@@ -49,15 +49,19 @@
 
 <!-- Form -->
 <div class="container" style="padding-top: 40px">
- <form action="" method="POST">
+ <form action="" method="POST" class="was-validated">
      {% csrf_token %}
   <div class="form-group">
     <label>Room name:</label>
-    <input type="text" class="form-control" name="roomName">
+    <input type="text" class="form-control" placeholder="Enter room name" name="roomName" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
   </div>
   <div class="form-group">
     <label>Room capacity:</label>
-    <input type="number" class="form-control" name="capacity">
+    <input type="number" min=0 class="form-control" placeholder="Enter room capacity" name="capacity" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
   </div>
   <div class="checkbox" style="padding-top: 10px; padding-bottom: 25px">
     <label><input type="checkbox" name="projector"> Projector</label>
