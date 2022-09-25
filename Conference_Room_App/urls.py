@@ -21,5 +21,8 @@ import Conf_App.views as view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', view.Home.as_view(), name='Home'),
-    path('room/new/', view.AddRoom.as_view(), name='AddRoom')
+    path('room/new/', view.AddRoom.as_view(), name='Add-Room'),
+    path('room/list/', view.RoomList.as_view(), name='Room-List'),
+    path('room/remove/<int:room_id>/', view.RemoveRoom.as_view(), name='Remove-Room')
+
 ]
